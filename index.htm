@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Zoo Rescue Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- FIXED: Stays pinned to the screen while scrolling -->
+  <div class="emergency-alert">🚨 Emergency: 555-ZOO</div>
+
+  <!-- STICKY: Scrolls normally, then sticks at top: 0 -->
+  <header class="top-banner">
+    <h1>🐾 Zoo Rescue Tracker</h1>
+    <p>Live Animal Location & Status Monitor</p>
+  </header>
+
+  <main class="container">
+
+    <!-- STATIC: Normal document flow -->
+    <section class="animal-card static-box">
+      <h2>1. Leo the Lion (Static)</h2>
+      <p><strong>Zone:</strong> Savanna — Resting in shade.</p>
+    </section>
+
+    <!-- RELATIVE: Shifted from its normal spot -->
+    <section class="animal-card relative-box">
+      <h2>2. Bella the Bear (Relative)</h2>
+      <p><strong>Zone:</strong> Forest Ridge — Nudged 20px right.</p>
+    </section>
+
+    <!-- RELATIVE parent + ABSOLUTE child -->
+    <section class="animal-card parent-box">
+      <span class="status-badge">CHECKUP</span>
+      <h2>3. Penny the Penguin (Absolute)</h2>
+      <p><strong>Zone:</strong> Arctic Pool — Badge pinned to top-right.</p>
+    </section>
+
+    <!-- Extra card to make scrolling easy -->
+    <section class="animal-card">
+      <h2>4. Rescue Log</h2>
+      <p>Scroll down to test the <strong>sticky</strong> header and <strong>fixed</strong> alert.</p>
+    </section>
+
+  </main>
+
+</body>
+</html>

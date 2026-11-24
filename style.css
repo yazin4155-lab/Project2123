@@ -1,0 +1,87 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #eef5f0;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  height: 1400px; /* Added height so you can scroll to test sticky and fixed */
+}
+
+/* 1. STICKY POSITIONING */
+.top-banner {
+  position: sticky;
+  top: 0;
+  background-color: #2e7d32;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+  z-index: 10; /* Keeps banner above scrolling cards */
+}
+
+.top-banner h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.top-banner p {
+  margin: 5px 0 0;
+  font-size: 14px;
+}
+
+/* 2. FIXED POSITIONING */
+.emergency-alert {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #d32f2f;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-weight: bold;
+  z-index: 20;
+}
+
+/* Main layout wrapper */
+.container {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 0 15px;
+}
+
+/* Shared styling for all animal cards */
+.animal-card {
+  background-color: white;
+  border: 2px solid #c8e6c9;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 25px;
+}
+
+/* 3. STATIC POSITIONING (Default) */
+.static-box {
+  position: static;
+}
+
+/* 4. RELATIVE POSITIONING */
+.relative-box {
+  position: relative;
+  left: 20px; /* Moves 20px to the right of its normal spot */
+  border-color: #81c784;
+}
+
+/* 5. ABSOLUTE POSITIONING (Needs a relative parent) */
+.parent-box {
+  position: relative; /* Acts as the anchor for the badge inside */
+}
+
+.status-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #ff9800;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
